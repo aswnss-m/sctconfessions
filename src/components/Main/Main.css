@@ -1,0 +1,76 @@
+main{
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    background-color: var(--off-white);
+    color: var(--black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content : center;
+}
+main>h1,p{
+    text-align: center;
+    width: 80%;
+}
+main>h1{
+    font-weight: 1rem;
+}
+.main-logo{
+    width: 80%;
+    max-width: 30rem;
+}  
+  /* CSS */
+  .button-19 {
+    appearance: button;
+    background-color: var(--light-pink);
+    border: solid transparent;
+    border-radius: 1rem;
+    border-width: 0 0 .25em;
+    box-sizing: border-box;
+    color: var(--off-white);
+    cursor: pointer;
+    font-family: din-round,sans-serif;
+    font-weight: bold;
+    overflow: visible;
+    padding: 1rem;
+    text-align: center;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 100%;
+    margin: .5rem 0;
+  }
+  
+  .button-19:after {
+    background-clip: padding-box;
+    background-color: var(--pink);
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 .25em;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
+  
+  .button-19:main,
+  .button-19:focus {
+    user-select: auto;
+  }
+  
+  .button-19:hover:not(:disabled) {
+    filter: brightness(1.1);
+    -webkit-filter: brightness(1.1);
+  }
+  
+  .button-19:disabled {
+    cursor: auto;
+  }  
