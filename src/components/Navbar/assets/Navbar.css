@@ -1,0 +1,21 @@
+nav {
+    background-color: var(--pink);
+    display: grid;
+    grid-template-areas: 'logo auto menu';
+    align-items: center;
+    -webkit-box-shadow: 10px 12px 32px -8px rgba(0, 0, 0, 0.41);
+    -moz-box-shadow: 10px 12px 32px -8px rgba(0, 0, 0, 0.41);
+    box-shadow: 10px 12px 32px -8px rgba(0, 0, 0, 0.41);
+}
+nav > ul {
+    grid-area: menu;
+}
+.logo img {
+    grid-area: logo;
+    width: 50%;
+    padding: 0.5rem;
+}
+
+.logo>img:hover {
+    width: 55%;
+}
