@@ -2,6 +2,7 @@
     display: grid;
     place-items: center;
     width: 100%;
+    background-color: var(--off-white);
 }
 .confession-form{
     display: grid;
@@ -36,4 +37,27 @@
 }
 .formgroup>label{
     font-weight: bold;
+}
+@keyframes removeborder {
+    from{
+        border-right:.25em solid var(--pink) ;
+    border-bottom:.25em solid var(--pink) ;
+    }
+    to{
+        border: none;
+    }
+}
+input,textarea,select{
+    border: none;
+    outline: none;
+    border-right:.25em solid var(--pink) ;
+    border-bottom:.25em solid var(--pink) ;
+}
+input:focus,textarea:focus{
+    /* border: none; */
+    outline: none;
+    transition:all linear .2s;
+    background-color: var(--pink);
+    color: var(--black);
+    animation: removeborder ease-out .2s;
 }

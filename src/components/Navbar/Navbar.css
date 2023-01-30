@@ -10,12 +10,21 @@ nav {
 nav > ul {
     grid-area: menu;
 }
+.logo{
+    padding: .5em;
+}
 .logo img {
     grid-area: logo;
     width: 50%;
+    max-width: 15rem;
     padding: 0.5rem;
 }
 
 .logo>img:hover {
     width: 55%;
+}
+
+.space{
+    height: 2em;
+    width: 100%;
 }
