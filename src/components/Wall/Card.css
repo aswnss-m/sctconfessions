@@ -1,0 +1,50 @@
+.card{
+    background-color: var(--off-white);
+    width: 90%;
+    max-width: 40rem;
+    height: minmax(20rem,30rem);
+    margin: .5rem .5rem;
+    padding: 1em;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-areas:
+    "Name Name .. Time"
+    "Branch Year .. .."
+    "Message Message Message Message"
+    "Message Message Message Message"
+    "CommentIcon Comment .. ..";
+}
+
+.card-to{
+    grid-area:Name;
+}
+.card-to>span{
+    color: var(--pink);
+}
+.card-time{
+    grid-area: Time;
+    width: fit-content;
+}
+.card-to-branch{
+    grid-area: Branch;
+    width: fit-content;
+    color: var(--pink);
+    font-weight: bold;
+}
+.card-to-year{
+    grid-area:Year;
+    color: var(--pink);
+    font-weight: bold;
+}
+.card-message{
+    grid-area:Message;
+    text-align: left;
+}
+.card-comment-icon{
+    grid-area: CommentIcon;
+    place-self: center;
+}
+.card-comment-count{
+    grid-area: Comment;
+    width: fit-content;
+}
