@@ -1,40 +1,59 @@
 .confession-container{
     display: grid;
-    padding-top: 1em;
     place-items: center;
     width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
     background-color: var(--off-white);
 }
 .confession-form{
     display: grid;
-    width: 80%;
-    max-width: 40rem;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(6,1fr);
+    width: 90%;
+    /* height: 70%; */
+    max-width: 1000px;
+    /* grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(6,1fr); */
+    grid-template-areas: 
+    "toname toname toname toname"
+    "year year branch branch"
+    "message message message message"
+    "message message message message"
+    "fromname fromname fromname fromname"
+    "button button button button";
     gap: .5em;
 }
+.toname{
+    grid-area: toname;
+}
+.year{
+    grid-area: year;
+}
+.branch{
+    grid-area: branch;
+}
+.message{
+    grid-area: message;
+}
+.fromname{
+    grid-area: fromname;
+}
+.button{
+    grid-area: button;
+}
 .formgroup{
-    width: 100%;
     display: flex;
     flex-direction: column;
 }
 .formgroup *{
     padding: .5em 0;
 }
-.grid-span-4{
-    grid-column: span 4;
-}
-.grid-span-2{
-    grid-column: span 2;
-}
-.grid-row-span-2{
-    grid-row: span 2;
-}
+
 .formgroup>input{
     padding: 1em .5em;
 }
 .formgroup>textarea{
     padding: 1em .5em;
+    height: 100%;
 }
 .formgroup>label{
     font-weight: bold;
@@ -62,4 +81,8 @@ input:focus,textarea:focus{
     background-color: var(--pink);
     color: var(--black);
     animation: removeborder ease-out .2s;
+}
+@media only screen and (max-width:770px){
+ .confession-form{
+ }   
 }

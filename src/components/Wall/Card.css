@@ -1,5 +1,6 @@
 .card{
-    background-color: var(--off-white);
+    background-color: var(--pink);
+    color: var(--off-white);
     width: 90%;
     max-width: 40rem;
     height: minmax(20rem,30rem);
@@ -19,7 +20,7 @@
     grid-area:Name;
 }
 .card-to>span{
-    color: var(--pink);
+    color: var(--black);
 }
 .card-time{
     grid-area: Time;
@@ -27,13 +28,11 @@
 }
 .card-to-branch{
     grid-area: Branch;
-    width: fit-content;
-    color: var(--pink);
     font-weight: bold;
+    min-width: fit-content;
 }
 .card-to-year{
     grid-area:Year;
-    color: var(--pink);
     font-weight: bold;
 }
 .card-message{

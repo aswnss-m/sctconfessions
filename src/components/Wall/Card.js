@@ -11,8 +11,8 @@ function Card(props) {
         <p className="card-message">
             {props.message}
         </p>
-        <img className="card-comment-icon" src={comment} />
-        <a className="card-comment-count">{props.comment} comments</a>
+        <img className="card-comment-icon" src={comment} alt='comment-icon' />
+        <a className="card-comment-count" href='/Confess'>{props.comment} comments</a>
     </div>
   )
 }

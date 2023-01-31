@@ -4,5 +4,7 @@ footer{
     color: var(--off-white);
     display: grid;
     width: 100%;
+    font-size: large;
     place-items: center;
+
 }
