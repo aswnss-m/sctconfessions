@@ -3,9 +3,9 @@ import "./Confession.css"
 function Confession() {
   return (
     <div className="confession-container">
-        <form action="POST" className='confession-form'>
+        <form action={'/Wall'} className='confession-form'>
             <div className="formgroup grid-span-4">
-                <label htmlFor="Name">Name</label>
+                <label htmlFor="Name" required>To Name</label>
                 <input type="text" name="Name" id="Name" />
             </div>
             <div className="formgroup grid-span-2">

@@ -1,5 +1,6 @@
 .confession-container{
     display: grid;
+    padding-top: 1em;
     place-items: center;
     width: 100%;
     background-color: var(--off-white);
@@ -52,6 +53,7 @@ input,textarea,select{
     outline: none;
     border-right:.25em solid var(--pink) ;
     border-bottom:.25em solid var(--pink) ;
+    font-family: 'Montserrat';
 }
 input:focus,textarea:focus{
     /* border: none; */

@@ -1,6 +1,6 @@
-body{
+/* body{
     background-color: var(--off-white);
-}
+} */
 nav {
     background-color: var(--pink);
     display: grid;
@@ -12,6 +12,19 @@ nav {
 }
 nav > ul {
     grid-area: menu;
+    width: fit-content;
+    place-self: end;
+    align-self: center;
+    margin-right: 1em;
+    display: flex;
+    list-style: none;
+    gap: 1em;
+    color: var(--off-white);
+    place-content: center;
+}
+nav>ul>a{
+    color: aliceblue;
+    text-decoration: none;
 }
 .logo{
     padding: .5em;
