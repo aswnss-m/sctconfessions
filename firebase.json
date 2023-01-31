@@ -1,7 +1,6 @@
 {
   "hosting": {
     "public": "build",
-    "site": "sctconfessions",
     "ignore": [
       "firebase.json",
       "**/.*",
