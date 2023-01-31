@@ -1,3 +1,6 @@
+body{
+    background-color: var(--off-white);
+}
 nav {
     background-color: var(--pink);
     display: grid;
