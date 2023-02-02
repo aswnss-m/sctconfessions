@@ -1,6 +1,6 @@
 import {React, useState} from 'react'
 import "./Confession.css"
-import { addDoc, collection } from 'firebase/firestore';
+import { addDoc } from 'firebase/firestore';
 import { confessionRef } from '../firebase/firebase-config';
 import { useNavigate } from 'react-router-dom';
 function Confession() {

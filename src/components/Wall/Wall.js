@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "./Wall.css"
 import Card from './Card'
-import { getDocs, collection } from 'firebase/firestore';
+import { getDocs } from 'firebase/firestore';
 import { confessionRef } from '../firebase/firebase-config';
 function Wall() {
   const [messageList,setMessageList] = useState([]);
