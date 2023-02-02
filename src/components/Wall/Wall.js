@@ -1,41 +1,53 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Wall.css"
 import Card from './Card'
+import { getDocs, collection } from 'firebase/firestore';
+import { confessionRef } from '../firebase/firebase-config';
 function Wall() {
-  const data = [
-    {
-      name:"Aswin Lal",
-      time:"10:00 AM",
-      branch:"AI-ML",
-      year:"3",
-      message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa iusto fuga molestias, magni ad soluta natus, optio dolorum quod autem voluptates debitis provident magnam doloremque maiores enim quidem. Ut, amet!",
-      comment:20,
-    },
-    {
-      name:"Aswin Lal",
-      time:"10:00 AM",
-      branch:"AI-ML",
-      year:"3",
-      message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa iusto fuga molestias, magni ad soluta natus, optio dolorum quod autem voluptates debitis provident magnam doloremque maiores enim quidem. Ut, amet!",
-      comment:20,
-    },
-    {
-      name:"Aswin Lal",
-      time:"10:00 AM",
-      branch:"AI-ML",
-      year:"3",
-      message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa iusto fuga molestias, magni ad soluta natus, optio dolorum quod autem voluptates debitis provident magnam doloremque maiores enim quidem. Ut, amet!",
-      comment:20,
-    },
-    {
-      name:"Aswin Lal",
-      time:"10:00 AM",
-      branch:"AI-ML",
-      year:"3",
-      message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa iusto fuga molestias, magni ad soluta natus, optio dolorum quod autem voluptates debitis provident magnam doloremque maiores enim quidem. Ut, amet!",
-      comment:20,
-    },
-  ]
+  const [messageList,setMessageList] = useState([]);
+  
+  useEffect( ()=>{
+    const getMessages = async () =>{
+      const message = await getDocs(confessionRef);
+      setMessageList(message.docs.map((doc)=> ({...doc.data(), id: doc.id})))
+    };
+
+    getMessages();
+  })
+  // const data = [
+  //   {
+  //     name:"Aswin Lal",
+  //     time:"10:00 AM",
+  //     branch:"AI-ML",
+  //     year:"3",
+  //     message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa iusto fuga molestias, magni ad soluta natus, optio dolorum quod autem voluptates debitis provident magnam doloremque maiores enim quidem. Ut, amet!",
+  //     comment:20,
+  //   },
+  //   {
+  //     name:"Aswin Lal",
+  //     time:"10:00 AM",
+  //     branch:"AI-ML",
+  //     year:"3",
+  //     message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa iusto fuga molestias, magni ad soluta natus, optio dolorum quod autem voluptates debitis provident magnam doloremque maiores enim quidem. Ut, amet!",
+  //     comment:20,
+  //   },
+  //   {
+  //     name:"Aswin Lal",
+  //     time:"10:00 AM",
+  //     branch:"AI-ML",
+  //     year:"3",
+  //     message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa iusto fuga molestias, magni ad soluta natus, optio dolorum quod autem voluptates debitis provident magnam doloremque maiores enim quidem. Ut, amet!",
+  //     comment:20,
+  //   },
+  //   {
+  //     name:"Aswin Lal",
+  //     time:"10:00 AM",
+  //     branch:"AI-ML",
+  //     year:"3",
+  //     message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa iusto fuga molestias, magni ad soluta natus, optio dolorum quod autem voluptates debitis provident magnam doloremque maiores enim quidem. Ut, amet!",
+  //     comment:20,
+  //   },
+  // ]
   return (
     <div className='Wall'>
       <div className="searchbar">
@@ -44,8 +56,8 @@ function Wall() {
           <input type="submit" value="search" />
         </form>
       </div>
-        {data.map((value)=>
-          <Card name={value.name} time={value.time} branch={value.branch} year={value.year} message = {value.message} comment={value.comment} />
+        {messageList.map((value)=>
+          <Card name={value.toname} branch={value.branch} year={value.year} message = {value.message} fromname={value.fromname} />
   )}
     </div>
   )

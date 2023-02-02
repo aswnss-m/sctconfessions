@@ -9,11 +9,11 @@
     border-radius: 1rem;
     display: grid;
     grid-template-areas:
-    "Name Name .. Time"
+    "Name Name .. .."
     "Branch Year .. .."
     "Message Message Message Message"
     "Message Message Message Message"
-    "CommentIcon Comment .. ..";
+    "Comment Comment .. ..";
 }
 
 .card-to{

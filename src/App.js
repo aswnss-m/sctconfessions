@@ -5,7 +5,7 @@ import {
 } from "react-router-dom";
 import Navbar from './components/Navbar/Navbar'
 import Main from './components/Main/Main'
-import Confession from './components/Footer/Confession/Confession'
+import Confession from './components/Confession/Confession'
 import Wall from './components/Wall/Wall'
 import Footer from './components/Footer/Footer';
 
