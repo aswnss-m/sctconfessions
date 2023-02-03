@@ -1,8 +1,9 @@
 :root{
   --black : #323232;
-  --pink : #fa4eab;
+  --pink : #fa4eaa5d;
+  --low-pink :#fa4eab;  
   --light-pink : #fe83c6;
-  --off-white : #fff2f9;
+  --off-white : #fbdded;
 }
 
 body {

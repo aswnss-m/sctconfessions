@@ -3,7 +3,7 @@
     place-items: center;
     width: 100%;
     min-height: 100vh;
-    min-height: 100dvh;
+    /* min-height: 100vh; */
     background-color: var(--off-white);
 }
 .confession-form{
@@ -52,37 +52,100 @@
     padding: 1em .5em;
 }
 .formgroup>textarea{
-    padding: 1em .5em;
+    padding: 1em 0.75em;
     height: 100%;
 }
 .formgroup>label{
     font-weight: bold;
+    /* font-weight: 500; */
 }
-@keyframes removeborder {
+/* @keyframes removeborder {
     from{
-        border-right:.25em solid var(--pink) ;
-    border-bottom:.25em solid var(--pink) ;
+    border-right:.15em solid var(--pink) ;
+    border-bottom:15em solid var(--pink) ;
     }
     to{
         border: none;
     }
-}
+} */
 input,textarea,select{
     border: none;
     outline: none;
-    border-right:.25em solid var(--pink) ;
-    border-bottom:.25em solid var(--pink) ;
+    
+    border-right:.3em double var(--low-pink) ;
+    border-bottom:.3em double var(--low-pink) ;
+  
+    /* background-color:var(--off-white); */
     font-family: 'Montserrat';
+    border-radius: 6px;
+    /* width: 10px; */
+   
+
 }
+input,textarea{
+    height: 24px;
+
+}
+select{
+    height: 52px;
+    font-family: monospace;
+    
+}
+option{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--black);
+}
+/* input:hover,
+textarea:hover,
+select:hover{
+
+
+    transition: ease-in;
+
+
+} */
+
 input:focus,textarea:focus{
     /* border: none; */
     outline: none;
     transition:all linear .2s;
     background-color: var(--pink);
-    color: var(--black);
+    /* color: var(--off-white); */
+    color: black;
+    font-weight: medium;
     animation: removeborder ease-out .2s;
 }
 @media only screen and (max-width:770px){
  .confession-form{
  }   
 }
+
+
+label{
+    /* border-radius: 120px; */
+}
+.button19 {
+    height: 34px;
+    border: none;
+    outline: none;
+
+    appearance: button;
+
+}
+
+.button-20:after {
+    background-clip: padding-box;
+    background-color: var(--pink);
+    border: solid transparent;
+    border-radius: 4px;
+    border-width: 0 0 .25em;
+    bottom: -4px;
+    /* left: 10px; */
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
+  
